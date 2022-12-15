@@ -14,6 +14,7 @@ Feature: Navigate to menu with parameter
     Then The user name should be "Eddie Murphy"
     When The user navigates to "Developers" menu
     Then The user should be able to see home name as "Developers"
+
   @rerun
   Scenario: Morgan Freeman navigates to Dashboard menu
     Given User should be on the login page
@@ -21,6 +22,7 @@ Feature: Navigate to menu with parameter
     Then The user name should be "Morgan Freeman"
     When The user navigates to "Dashboard" menu
     Then The user should be able to see home name as "Dashboard"
+
 
   Scenario Outline: Different user <name> navigates to <tab> menu
     Given User should be on the login page
