@@ -22,8 +22,6 @@ Feature: Navigate to menu with parameter
     When The user navigates to "Dashboard" menu
     Then The user should be able to see home name as "Dashboard"
 
-
-
   Scenario Outline: Different user <name> navigates to <tab> menu
     Given User should be on the login page
     When User should input "<email>" and "<password>"
