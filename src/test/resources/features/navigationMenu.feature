@@ -38,7 +38,7 @@ Feature: Navigate to Menu Test
     #    Get the text of dashboard
     #    Then go to My Profile menu and get the text of User Profile
 
-  Scenario: Login as Jhon Nash
+    Scenario: Login as Jhon Nash
     Given The user is on the login page
     When Get the text of dashboard
     And Go to My Profile menu
