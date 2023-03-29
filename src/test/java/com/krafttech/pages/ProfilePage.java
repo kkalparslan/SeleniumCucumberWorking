@@ -12,10 +12,13 @@ import java.util.List;
 
 public class ProfilePage extends BasePage {
 
-    @FindBy(xpath = "//button[.='Edit Profile'] ")
+    @FindBy(xpath = "//button[.='Edit Profile']")
     public WebElement editBtn;
 
-    @FindBy(xpath = "(//span[.='My Profile'])[2]")
+    @FindBy(xpath = "//span[.='Alparslan']")
+    public WebElement userName_loc;
+
+    @FindBy(xpath = "//span[.='My Profile']")
     public WebElement myProfile_loc;
 
     @FindBy(css = "#name")

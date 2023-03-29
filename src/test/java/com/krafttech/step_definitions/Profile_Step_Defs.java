@@ -2,9 +2,11 @@ package com.krafttech.step_definitions;
 
 import com.krafttech.pages.ProfilePage;
 import com.krafttech.utulities.BrowserUtils;
+import com.krafttech.utulities.Driver;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 import org.junit.Assert;
+import org.openqa.selenium.By;
 import org.openqa.selenium.support.ui.Select;
 
 import java.util.List;
@@ -15,6 +17,7 @@ public class Profile_Step_Defs {
 
     @When("User should go to My Profile")
     public void user_should_go_to_my_profile() {
+        profilePage.userName_loc.click();
         BrowserUtils.waitForClickablility(profilePage.myProfile_loc,5);
         profilePage.myProfile_loc.click();
     }
@@ -28,9 +31,9 @@ public class Profile_Step_Defs {
         profilePage.fullName.clear();
         profilePage.fullName.sendKeys("Alparslan");
         profilePage.about.clear();
-        profilePage.about.sendKeys("This is a great work");
+        profilePage.about.sendKeys("Good job");
         profilePage.company.clear();
-        profilePage.company.sendKeys("GHAN IT");
+        profilePage.company.sendKeys("Öztürk Technologie");
 
         BrowserUtils.waitForVisibility(profilePage.slider,5);
         BrowserUtils.dragAndDropBy(profilePage.slider,150, 0);
@@ -43,7 +46,7 @@ public class Profile_Step_Defs {
         profilePage.location.clear();
         profilePage.location.sendKeys("Ankara");
         profilePage.skills.clear();
-        profilePage.skills.sendKeys("Postman, RestAssured, API, SQL");
+        profilePage.skills.sendKeys("Postman, RestAssured, Cypress, SQL, Karate");
         BrowserUtils.clickWithJS(profilePage.save);
     }
     @Then("User should verify the profile updated message")

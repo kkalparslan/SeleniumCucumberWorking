@@ -13,7 +13,6 @@ public class Hooks {
 
     @Before
     public void setUp(){
-        System.out.println("\tThis is coming from before method");
        // Driver.get().manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
         Driver.get().manage().window().maximize();
     }
@@ -21,14 +20,11 @@ public class Hooks {
     @After
     public void tearDown(Scenario scenario){  // after method kendisinden önceki scenario fail olsa bile çalışır..
                              // buradan hooks ile .feature file arasında bir bağlantı olmadığını anlıyoruz
-        System.out.println("\tThis is coming from after method");
-        System.out.println("\t---------------------------------");
         if(scenario.isFailed()){
             final byte[] screenshot = ((TakesScreenshot) Driver.get()).getScreenshotAs(OutputType.BYTES);
             scenario.attach(screenshot,"image/png","screenshot");
         }
         Driver.closeDriver();
-
     }
 
     @Before("@db") //db=data base tag ı..feature da hangi senaryonuın db tag ı

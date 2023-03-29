@@ -3,7 +3,7 @@ Feature: Profile Tests
   Background:
     Given User should be on the login page
 
-
+@bu
   Scenario: User should be able to edit profile
 
     When User should input login information
