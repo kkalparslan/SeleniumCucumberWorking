@@ -23,9 +23,7 @@ Feature: Account Type
     When User should input "krafttech@kraft.com" and "Test1234"
     Then The user name should be "Kyle Masters"
 
-
   Scenario Outline: Different <name> user type
-
     Given User should be on the login page
     When User should input "<userEmail>" and "<password>"
     Then The user name should be "<name>"

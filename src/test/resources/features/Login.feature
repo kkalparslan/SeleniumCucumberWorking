@@ -34,7 +34,6 @@ Feature: Krafttech Log in Test
     When User should input "user22@test.com" and "Test123456"
     Then User should be on home page
 
-
   Scenario: Login as a given user
     Then User should input follwing credantials
 

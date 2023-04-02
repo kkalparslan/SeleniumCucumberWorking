@@ -7,6 +7,7 @@ Feature: Navigate to menu with parameter
     Then The user name should be "Harun"
     When The user navigates to "Edit Profile" menu
     Then The user should be able to see home name as "Edit User Profile"
+
   @parallel
   Scenario: Eddie Murphy navigates to Developers menu
     Given User should be on the login page
@@ -14,6 +15,7 @@ Feature: Navigate to menu with parameter
     Then The user name should be "Eddie Murphy"
     When The user navigates to "Developers" menu
     Then The user should be able to see home name as "Developers"
+
   @parallel
   Scenario: Morgan Freeman navigates to Dashboard menu
     Given User should be on the login page

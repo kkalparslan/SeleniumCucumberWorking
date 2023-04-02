@@ -46,7 +46,6 @@ Feature: Navigate to Menu Test
     Then Verify that text is User Profile
 
 
-    #
     #    -Write scenarios
     #    -Create step definitions
     #    -No need to use any JAVA code.
