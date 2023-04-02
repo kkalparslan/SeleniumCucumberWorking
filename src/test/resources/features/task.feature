@@ -17,7 +17,6 @@
 
 Feature: Module Test
 
-
   Scenario: Module test with different user
     Given User should be on the login page
     When User should input "alp@gmail.com" and "12345678"
