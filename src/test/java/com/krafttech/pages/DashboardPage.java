@@ -45,7 +45,6 @@ public class DashboardPage extends BasePage{
         String Title=dashboardPageTitle_loc.getText();
         return Title;
     }
-
     public String UsersNames(String name){
         String usernameLocator="//h3[.='"+name+"']";
         BrowserUtils.waitForPresenceOfElement(By.xpath(usernameLocator), 5);
@@ -54,16 +53,13 @@ public class DashboardPage extends BasePage{
         String actualName=UserName.getText();
         return actualName;
     }
-
     public String getUserName(){
         BrowserUtils.waitForVisibility(getUserName_loc,5);
         return getUserName_loc.getText();
     }
-
     public String getHomeName(String homeName){
         BrowserUtils.waitFor(1);
         return Driver.get().findElement(By.xpath("//li[text()='"+homeName+"']")).getText();
                                      //(By.xpath("             //li[text()='"+homeName+"']")).getText();
     }
-
 }
