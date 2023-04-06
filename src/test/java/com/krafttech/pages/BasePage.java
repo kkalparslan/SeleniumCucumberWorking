@@ -11,19 +11,14 @@ import org.openqa.selenium.support.PageFactory;
 
 public abstract class BasePage {
     WebDriver driver;
-
     public BasePage(){
         PageFactory.initElements(Driver.get(), this);
     }
-
     public void navigateToTab(String tabName){
         driver=Driver.get();
         driver.findElement(By.xpath("//nav//*[.='"+tabName+"']")).click();
-
     }
-
     public void navigateToModele(String tab, String module){
-
         String tabLocator="//span[.='"+tab+"']";
         String moduleLocator="//span[.='"+module+"']";
         driver=Driver.get();
@@ -34,11 +29,8 @@ public abstract class BasePage {
 
         BrowserUtils.waitForClickablility(By.xpath(moduleLocator), 5);
         Driver.get().findElement(By.xpath(moduleLocator)).click();
-
     }
-
     public String subTitle(String subTitle){
-
         String subTitleLocator="//h1[.='"+subTitle+"']";
 
         BrowserUtils.waitForPresenceOfElement(By.xpath(subTitleLocator), 5);
@@ -47,9 +39,7 @@ public abstract class BasePage {
 
         String actualSubTitle= SubTitle.getText();
         return actualSubTitle;
-
     }
-
     public String getAccountName_mtd(String accountName){
         return Driver.get().findElement(By.xpath("//span[text()='"+accountName+"']")).getText();
     }
