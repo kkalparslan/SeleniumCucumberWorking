@@ -1,0 +1,2 @@
+file:src/test/resources/features/navigateMenuWithParameter.feature:12:20
+file:src/test/resources/features/accountType.feature:10:16
