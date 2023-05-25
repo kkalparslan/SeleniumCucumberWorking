@@ -20,12 +20,10 @@ public class Task_Step_Defs {
         System.out.println("profileOptionsAndUserName = " + profileOptionsAndUserName);
 
         Assert.assertEquals("Verify the name", profileOptionsAndUserName, actualOptionsAndUserName);
-
     }
     @When("User should go to {string} modul")
     public void user_should_go_to_modul(String tabName) {
         profilePage.profileTabs(tabName);
-
     }
     @When("User should input information and click Add Experience Button")
     public void user_should_input_information_and_click_add_experience_button() {
@@ -37,9 +35,7 @@ public class Task_Step_Defs {
         profilePage.endYear.sendKeys("10.10.2022");
         profilePage.jobDescription.sendKeys("TestNG, Postman, Cucumber, Selenium");
         profilePage.addExperienceBtn.click();
-
         BrowserUtils.waitFor(3);
-
     }
     @Then("User should see Overview module")
     public void user_should_see_overview_module() {
@@ -49,8 +45,5 @@ public class Task_Step_Defs {
         System.out.println("actualTitle = " + actualTitle);
 
         Assert.assertEquals(expectedTitle, actualTitle);
-
     }
-
-
 }

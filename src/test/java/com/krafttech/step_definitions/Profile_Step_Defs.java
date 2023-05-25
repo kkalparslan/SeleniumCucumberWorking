@@ -24,7 +24,6 @@ public class Profile_Step_Defs {
     @When("User should navigate to {string}")
     public void user_should_navigate_to(String tabName) {
         profilePage.profileTabs(tabName);
-
     }
     @When("User should input the information boxes")
     public void user_should_input_the_information_boxes() {
@@ -51,24 +50,19 @@ public class Profile_Step_Defs {
     }
     @Then("User should verify the profile updated message")
     public void user_should_verify_the_profile_updated_message() {
-
         String actualMsg=profilePage.profileUpdate.getText();
         String expectedMsg="Profile Updated";
 
         Assert.assertEquals(expectedMsg, actualMsg); // TestNG de assert ederken önce actual daha sonra expected
         // yazılırken Cucumber da assertion önce expected daha sonra actual şeklinde yapılmalıdır.
     }
-
     @Then("User should see the profile options")
     public void user_should_see_the_profile_options(List<String>profileOptions) {
-
         List<String> actualOptions=BrowserUtils.getElementsText(profilePage.profileOptions_loc);
         System.out.println("actualOptions.size() = " + actualOptions.size());
         System.out.println("actualOptions = " + actualOptions);
         System.out.println("profileOptions = " + profileOptions);
 
         Assert.assertEquals(profileOptions, actualOptions);
-
-
     }
 }
