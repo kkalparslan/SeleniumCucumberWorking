@@ -1,0 +1,8 @@
+* git intellijde yeni framework açıp onuda github ile paylaşmak için email ve name bilgisi
+isterse terminalden git config user.email "" yaparak ve git config user.name "" bilgisi ile
+doldurmamız gerekiyor. Var mı diye sorgusunu da aynı komutlarla yapabiliriz: git config user.email
+şayet bu bilgileri proje bazlı girersek mail ve name bilgileri sadece bu proje için geçerli olur ve
+diğer yeni projelerde de aynı işlemi tekrarlamamız gerekir. bunu bir kere girip birdaha ihtiyaç
+ duymak istemiyorsak cd.. komutu ile klasörün içine bir adım geri gelerek email ve name bilgilerini
+  burada girmemiz gerekmektedir. sonrasında bu klasör içinde(ideaproject) ne kadar yeni FM
+  oluştursakta artık github ile paylaşmak için mail ve name bilgisi istemeyecektir.
