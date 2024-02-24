@@ -23,13 +23,9 @@ public class Test_JDBC_Metadata {
             int kolonSayisi=metaData.getColumnCount();
             for (int i = 1; i <=kolonSayisi ; i++) {
                 System.out.println(i+". kolon ismi: "+ metaData.getColumnName(i));
-
             }
-
         } catch (SQLException e) {
             throw new RuntimeException(e);
         }
-
-
     }
 }
