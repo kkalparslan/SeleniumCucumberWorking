@@ -39,7 +39,6 @@ public abstract class BasePage {
 
         String actualSubTitle= SubTitle.getText();
         return actualSubTitle;
-
     }
     public String getAccountName_mtd(String accountName){
         return Driver.get().findElement(By.xpath("//span[text()='"+accountName+"']")).getText();

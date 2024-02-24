@@ -28,7 +28,5 @@ public class Test_JDBC_Connection {
         } catch (SQLException e) {
             System.out.println("CONNECTION ERROR "+ e.getMessage());
         }
-
     }
-
 }
