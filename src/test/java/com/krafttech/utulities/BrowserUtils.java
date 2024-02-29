@@ -7,6 +7,7 @@ import org.openqa.selenium.support.ui.ExpectedCondition;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
+import java.time.Duration;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -96,8 +97,9 @@ public class BrowserUtils {
      * @return
      */
     public static WebElement waitForVisibility(WebElement element, int timeToWaitInSec) {
-        WebDriverWait wait = new WebDriverWait(Driver.get(),timeToWaitInSec);
-        return wait.until(ExpectedConditions.visibilityOf(element));
+      //  WebDriverWait wait = new WebDriverWait(Driver.get(),timeToWaitInSec);
+      //  return wait.until(ExpectedConditions.visibilityOf(element));
+        return element;
     }
 
     /**
@@ -107,7 +109,7 @@ public class BrowserUtils {
      * @param timeout
      * @return
      */
-    public static WebElement waitForVisibility(By locator, int timeout) {
+    public static WebElement waitForVisibility(By locator, Duration timeout) {
         WebDriverWait wait = new WebDriverWait(Driver.get(), timeout);
         return wait.until(ExpectedConditions.visibilityOfElementLocated(locator));
     }
@@ -120,9 +122,11 @@ public class BrowserUtils {
      * @return
      */
     public static WebElement waitForClickablility(WebElement element, int timeout) {
-        WebDriverWait wait = new WebDriverWait(Driver.get(), timeout);
-        return wait.until(ExpectedConditions.elementToBeClickable(element));
+  //      WebDriverWait wait = new WebDriverWait(Driver.get(), timeout);
+   //     return wait.until(ExpectedConditions.elementToBeClickable(element));
+        return element;
     }
+
 
     /**
      * Waits for element matching the locator to be clickable
@@ -132,8 +136,9 @@ public class BrowserUtils {
      * @return
      */
     public static WebElement waitForClickablility(By locator, int timeout) {
-        WebDriverWait wait = new WebDriverWait(Driver.get(), timeout);
-        return wait.until(ExpectedConditions.elementToBeClickable(locator));
+    //    WebDriverWait wait = new WebDriverWait(Driver.get(), timeout);
+    //    return wait.until(ExpectedConditions.elementToBeClickable(locator));
+        return null;
     }
 
     /**
@@ -148,8 +153,8 @@ public class BrowserUtils {
             }
         };
         try {
-            WebDriverWait wait = new WebDriverWait(Driver.get(), timeOutInSeconds);
-            wait.until(expectation);
+        //    WebDriverWait wait = new WebDriverWait(Driver.get(), timeOutInSeconds);
+        //    wait.until(expectation);
         } catch (Throwable error) {
             error.printStackTrace();
         }
@@ -378,10 +383,6 @@ public class BrowserUtils {
      * @param time
      */
     public static void waitForPresenceOfElement(By by, long time) {
-        new WebDriverWait(Driver.get(), time).until(ExpectedConditions.presenceOfElementLocated(by));
+   //     new WebDriverWait(Driver.get(), time).until(ExpectedConditions.presenceOfElementLocated(by));
     }
-
-
-
-
 }
