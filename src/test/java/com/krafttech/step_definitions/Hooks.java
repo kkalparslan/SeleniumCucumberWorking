@@ -31,13 +31,10 @@ public class Hooks {
                    // varsa orada bağlantıya geçecek burdaki before ve after meyhod
     public void setUpDb(){
         System.out.println("\tConnecting DB");
-
     }
 
     @After("@db")
     public void tearDownDb(){
         System.out.println("\tDisconnecting DB");
-
     }
-
 }

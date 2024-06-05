@@ -76,6 +76,5 @@ public class Login_Step_Defs {
         BrowserUtils.waitFor(1);
         String actualWarningMessage=loginPage.getWarningMessageText(expectedWarningMessage);
         Assert.assertEquals("Verify the warning message", expectedWarningMessage, actualWarningMessage);
-
     }
 }

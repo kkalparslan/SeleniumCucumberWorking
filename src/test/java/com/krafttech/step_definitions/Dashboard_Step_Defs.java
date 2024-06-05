@@ -17,13 +17,11 @@ public class Dashboard_Step_Defs {
 //        System.out.println("expectedName = " + expectedName);
 
         Assert.assertEquals("Verify the name is match", expectedName, actualName);
-
     }
 
     @When("The user navigates to {string} menu")
     public void the_user_navigates_to_menu(String tabName) {
         dashboardPage.navigateToTab(tabName);
-
     }
 
     @Then("The user should be able to see home name as {string}")
@@ -32,6 +30,5 @@ public class Dashboard_Step_Defs {
 //        System.out.println("actualHomeName = " + actualHomeName);
 //        System.out.println("expectedHomeName = " + expectedHomeName);
         Assert.assertEquals("Verify that home name is displayed", expectedHomeName, actualHomeName);
-
     }
 }
