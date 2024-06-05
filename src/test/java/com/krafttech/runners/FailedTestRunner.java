@@ -12,5 +12,4 @@ import org.junit.runner.RunWith;
         glue = "com/krafttech/step_definitions"
 )
 public class FailedTestRunner {
-
 }
