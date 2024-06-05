@@ -22,7 +22,7 @@ Feature: Module Test
     When User should input "alp@gmail.com" and "12345678"
     Then User should see profile options and username
       | Dashboard    |
-      | Developers   |
+      | Developers   |  
       | Edit Profile |
       | Alparslan    |
 
