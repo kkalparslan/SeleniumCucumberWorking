@@ -24,8 +24,6 @@ Feature: Navigate to Menu Test
     #    Login as Sebastian
     #    Get the text of dashboard
     #    Then go to Edit Profile menu and get the text of Edit User Profile
-    #
-
   Scenario: Login as Sebastian
     Given The user is on the login page
     When Get the text of dashboard
@@ -37,14 +35,12 @@ Feature: Navigate to Menu Test
     #    Login as Jhon Nash
     #    Get the text of dashboard
     #    Then go to My Profile menu and get the text of User Profile
-
     Scenario: Login as Jhon Nash
     Given The user is on the login page
     When Get the text of dashboard
     And Go to My Profile menu
     And Get the text of User Profile
     Then Verify that text is User Profile
-
 
     #    -Write scenarios
     #    -Create step definitions
