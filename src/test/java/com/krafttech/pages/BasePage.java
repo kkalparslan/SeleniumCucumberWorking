@@ -1,7 +1,5 @@
 package com.krafttech.pages;
 
-
-
 import com.krafttech.utulities.BrowserUtils;
 import com.krafttech.utulities.Driver;
 import org.openqa.selenium.By;
@@ -11,36 +9,41 @@ import org.openqa.selenium.support.PageFactory;
 
 public abstract class BasePage {
     WebDriver driver;
-    public BasePage(){
+
+    public BasePage() {
         PageFactory.initElements(Driver.get(), this);
     }
-    public void navigateToTab(String tabName){
-        driver=Driver.get();
-        driver.findElement(By.xpath("//nav//*[.='"+tabName+"']")).click();
+
+    public void navigateToTab(String tabName) {
+        driver = Driver.get();
+        driver.findElement(By.xpath("//nav//*[.='" + tabName + "']")).click();
     }
-    public void navigateToModele(String tab, String module){
-        String tabLocator="//span[.='"+tab+"']";
-        String moduleLocator="//span[.='"+module+"']";
-        driver=Driver.get();
+
+    public void navigateToModele(String tab, String module) {
+        String tabLocator = "//span[.='" + tab + "']";
+        String moduleLocator = "//span[.='" + module + "']";
+        driver = Driver.get();
 
         BrowserUtils.waitForClickablility(By.xpath(tabLocator), 5);
-        WebElement tabElement=Driver.get().findElement(By.xpath(tabLocator));
+        WebElement tabElement = Driver.get().findElement(By.xpath(tabLocator));
         tabElement.click();
 
         BrowserUtils.waitForClickablility(By.xpath(moduleLocator), 5);
         Driver.get().findElement(By.xpath(moduleLocator)).click();
     }
-    public String subTitle(String subTitle){
-        String subTitleLocator="//h1[.='"+subTitle+"']";
+
+    public String subTitle(String subTitle) {
+        String subTitleLocator = "//h1[.='" + subTitle + "']";
 
         BrowserUtils.waitForPresenceOfElement(By.xpath(subTitleLocator), 5);
 
-        WebElement SubTitle=Driver.get().findElement(By.xpath(subTitleLocator));
+        WebElement SubTitle = Driver.get().findElement(By.xpath(subTitleLocator));
 
-        String actualSubTitle= SubTitle.getText();
+        String actualSubTitle = SubTitle.getText();
         return actualSubTitle;
     }
-    public String getAccountName_mtd(String accountName){
-        return Driver.get().findElement(By.xpath("//span[text()='"+accountName+"']")).getText();
+
+    public String getAccountName_mtd(String accountName) {
+        return Driver.get().findElement(By.xpath("//span[text()='" + accountName + "']")).getText();
     }
 }
