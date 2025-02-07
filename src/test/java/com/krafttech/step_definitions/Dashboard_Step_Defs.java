@@ -8,11 +8,11 @@ import org.junit.Assert;
 import org.openqa.selenium.By;
 
 public class Dashboard_Step_Defs {
-    DashboardPage dashboardPage=new DashboardPage();
+    DashboardPage dashboardPage = new DashboardPage();
 
     @Then("The user name should be {string}")
     public void the_user_name_should_be(String expectedName) {
-        String actualName=dashboardPage.getUserName();
+        String actualName = dashboardPage.getUserName();
 //        System.out.println("actualName = " + actualName);
 //        System.out.println("expectedName = " + expectedName);
 
