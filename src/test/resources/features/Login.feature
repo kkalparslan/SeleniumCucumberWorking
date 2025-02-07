@@ -41,7 +41,6 @@ Feature: Krafttech Log in Test
       | password | Test123456      |
       | name     | User22          |
 
-
   Scenario Outline: Data table and scenario outline
     Then User should input follwing credantials
 
@@ -54,6 +53,3 @@ Feature: Krafttech Log in Test
       | user22@test.com         | Test123456 | User22         |
       | eddiem@kraft.com        | eddiem12   | Eddie Murphy   |
       | morganfreeman@kraft.com | mfreeman   | Morgan Freeman |
-
-
-
