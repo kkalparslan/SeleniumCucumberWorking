@@ -11,12 +11,10 @@ import java.time.Duration;
 import java.util.ArrayList;
 import java.util.List;
 
-
 public class BrowserUtils {
-
-
     /**
      * Switches to new window by the exact title. Returns to original window if target title not found
+     *
      * @param targetTitle
      */
     public static void switchToWindow(String targetTitle) {
@@ -39,10 +37,11 @@ public class BrowserUtils {
         Actions actions = new Actions(Driver.get());
         actions.moveToElement(element).perform();
     }
-    public static void dragAndDropBy(WebElement element,int x,int y){
 
-        Actions actions=new Actions(Driver.get());
-        actions.dragAndDropBy(element,x,y).perform();
+    public static void dragAndDropBy(WebElement element, int x, int y) {
+
+        Actions actions = new Actions(Driver.get());
+        actions.dragAndDropBy(element, x, y).perform();
     }
 
     /**
@@ -97,8 +96,8 @@ public class BrowserUtils {
      * @return
      */
     public static WebElement waitForVisibility(WebElement element, int timeToWaitInSec) {
-      //  WebDriverWait wait = new WebDriverWait(Driver.get(),timeToWaitInSec);
-      //  return wait.until(ExpectedConditions.visibilityOf(element));
+        //  WebDriverWait wait = new WebDriverWait(Driver.get(),timeToWaitInSec);
+        //  return wait.until(ExpectedConditions.visibilityOf(element));
         return element;
     }
 
@@ -122,11 +121,10 @@ public class BrowserUtils {
      * @return
      */
     public static WebElement waitForClickablility(WebElement element, int timeout) {
-  //      WebDriverWait wait = new WebDriverWait(Driver.get(), timeout);
-   //     return wait.until(ExpectedConditions.elementToBeClickable(element));
+        //      WebDriverWait wait = new WebDriverWait(Driver.get(), timeout);
+        //     return wait.until(ExpectedConditions.elementToBeClickable(element));
         return element;
     }
-
 
     /**
      * Waits for element matching the locator to be clickable
@@ -136,8 +134,8 @@ public class BrowserUtils {
      * @return
      */
     public static WebElement waitForClickablility(By locator, int timeout) {
-    //    WebDriverWait wait = new WebDriverWait(Driver.get(), timeout);
-    //    return wait.until(ExpectedConditions.elementToBeClickable(locator));
+        //    WebDriverWait wait = new WebDriverWait(Driver.get(), timeout);
+        //    return wait.until(ExpectedConditions.elementToBeClickable(locator));
         return null;
     }
 
@@ -153,8 +151,8 @@ public class BrowserUtils {
             }
         };
         try {
-        //    WebDriverWait wait = new WebDriverWait(Driver.get(), timeOutInSeconds);
-        //    wait.until(expectation);
+            //    WebDriverWait wait = new WebDriverWait(Driver.get(), timeOutInSeconds);
+            //    wait.until(expectation);
         } catch (Throwable error) {
             error.printStackTrace();
         }
@@ -191,7 +189,6 @@ public class BrowserUtils {
         }
     }
 
-
     /**
      * Verifies whether the element is displayed on page
      *
@@ -207,7 +204,6 @@ public class BrowserUtils {
 
         }
     }
-
 
     /**
      * Waits for element to be not stale
@@ -239,7 +235,6 @@ public class BrowserUtils {
         }
     }
 
-
     /**
      * Clicks on an element using JavaScript
      *
@@ -249,7 +244,6 @@ public class BrowserUtils {
         ((JavascriptExecutor) Driver.get()).executeScript("arguments[0].scrollIntoView(true);", element);
         ((JavascriptExecutor) Driver.get()).executeScript("arguments[0].click();", element);
     }
-
 
     /**
      * Scrolls down to an element using JavaScript
@@ -282,6 +276,7 @@ public class BrowserUtils {
 
     /**
      * Highlighs an element by changing its background and border color
+     *
      * @param element
      */
     public static void highlight(WebElement element) {
@@ -347,7 +342,6 @@ public class BrowserUtils {
 
     }
 
-
     /**
      * This method will recover in case of exception after unsuccessful the click,
      * and will try to click on element again.
@@ -377,12 +371,13 @@ public class BrowserUtils {
     }
 
     /**
-     *  checks that an element is present on the DOM of a page. This does not
-     *    * necessarily mean that the element is visible.
+     * checks that an element is present on the DOM of a page. This does not
+     * * necessarily mean that the element is visible.
+     *
      * @param by
      * @param time
      */
     public static void waitForPresenceOfElement(By by, long time) {
-   //     new WebDriverWait(Driver.get(), time).until(ExpectedConditions.presenceOfElementLocated(by));
+        //     new WebDriverWait(Driver.get(), time).until(ExpectedConditions.presenceOfElementLocated(by));
     }
 }
