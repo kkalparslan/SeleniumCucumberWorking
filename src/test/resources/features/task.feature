@@ -34,5 +34,3 @@ Feature: Module Test
       And User should go to "Add Experience" modul
       And User should input information and click Add Experience Button
       Then User should see Overview module
-
-

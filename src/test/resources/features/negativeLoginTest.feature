@@ -17,7 +17,3 @@ Feature: Negative Login Test
       |                | mike1234      | Please enter your email.                             |
       | mike@gmail.com |               | Please enter your password!                          |
       |                |               | Please enter your password!                          |
-
-
-
-

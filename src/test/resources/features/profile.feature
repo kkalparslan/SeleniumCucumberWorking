@@ -12,7 +12,6 @@ Feature: Profile Tests
     And User should input the information boxes
     Then User should verify the profile updated message
 
-
   Scenario: User should be able to see profile options
 
     When User should input "user22@test.com" and "Test123456"
@@ -21,4 +20,3 @@ Feature: Profile Tests
       | Forms      |
       | JavaScript |
       | My Profile |
-
